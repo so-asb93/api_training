@@ -25,7 +25,7 @@ public class MatcheService {
         this.matchRepository = matchRepository;
     }
 
-    @Cacheable("UserData")
+    @Cacheable("LoginData")
     public LoginData getUserAge(LoginData user) throws IOException {
         AgifyApiData apiUser = agifyClient.agePredict(user.userName, user.userCountry).execute().body();
         LoginData userCurrent = new LoginData(user.userName, user.userEmail, user.userTweeter, user.userCountry, user.userSex, user.userSexPref, apiUser.age);
