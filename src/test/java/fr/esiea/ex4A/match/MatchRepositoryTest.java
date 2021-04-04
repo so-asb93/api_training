@@ -12,7 +12,7 @@ class MatchRepositoryTest {
     @Test
     void adding_user_with_real_credentials() {
         LoginData user = new LoginData("Test", "test@test.com",
-            "tweeterTest", "FR", "M", "M");
+            "tweeterTest", "FR", "M", "M", 22);
         loginRepository.addUser(user);
 
         Assertions.assertTrue(loginRepository.UserIsExist(user));

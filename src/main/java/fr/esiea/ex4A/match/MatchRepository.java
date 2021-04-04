@@ -16,10 +16,14 @@ public class MatchRepository {
     }
 
     public List<MatchData> findMatch(LoginData user, String country_id) {
-            List<MatchData> matches = new ArrayList<>();
-            matches.add(new MatchData("machin", "machin45"));
-            matches.add(new MatchData("truc", "trucbidule"));
-            return matches;
-
+        ArrayList<MatchData> usersMatched = new ArrayList<>();
+        if (loginRepository.loginUsers != null && loginRepository.loginUsers.size() > 1){
+            for(LoginData u : loginRepository.loginUsers) {
+                if (u.userSex.equals(user.userSexPref) && (Math.abs(u.userAge - user.userAge) <= 4) && !u.equals(user) && u.userCountry.equals(country_id)){
+                    usersMatched.add(new MatchData(u.userName, u.userTweeter));
+                }
+            }
+        }
+        return usersMatched;
     }
 }

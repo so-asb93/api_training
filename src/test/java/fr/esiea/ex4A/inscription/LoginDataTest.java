@@ -8,9 +8,9 @@ class LoginDataTest {
     @Test
     void equality_between_two_users() {
         LoginData userOne = new LoginData("Toto", "toto@gmail.com", "totoTweet", "FR",
-            "M", "F");
+            "M", "F", 22);
         LoginData userTwo = new LoginData("Toto", "toto@gmail.com", "totoTweet", "FR",
-            "M", "F");
+            "M", "F", 22);
 
         Assertions.assertTrue(userOne.equals(userTwo) && userTwo.equals(userOne));
         Assertions.assertTrue(userOne.hashCode() == userTwo.hashCode());
