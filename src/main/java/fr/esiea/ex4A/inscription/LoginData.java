@@ -10,15 +10,17 @@ public class LoginData {
     public final String userCountry;
     public final String userSex;
     public final String userSexPref;
+    public final Integer userAge;
 
     public LoginData(String userName, String userEmail, String userTweeter, String userCountry,
-                    String userSex, String userSexPref) {
+                     String userSex, String userSexPref, Integer userAge) {
         this.userName = userName;
         this.userTweeter = userTweeter;
         this.userCountry = userCountry;
         this.userSex = userSex;
         this.userSexPref = userSexPref;
         this.userEmail = userEmail;
+        this.userAge = userAge;
     }
 
     public LoginData() {
@@ -28,6 +30,7 @@ public class LoginData {
         userCountry = null;
         userSex = null;
         userSexPref = null;
+        userAge = null;
     }
 
     @Override
@@ -39,11 +42,12 @@ public class LoginData {
             Objects.equals(userEmail, loginData.userEmail) &&
             Objects.equals(userTweeter, loginData.userTweeter) &&
             Objects.equals(userCountry, loginData.userCountry) &&
-            Objects.equals(userSexPref, loginData.userSexPref);
+            Objects.equals(userSexPref, loginData.userSexPref) &&
+            Objects.equals(userAge, loginData.userAge);
     }
 
     @Override
     public int hashCode() {
-        return Objects.hash(userName, userEmail, userTweeter, userCountry, userSexPref);
+        return Objects.hash(userName, userEmail, userTweeter, userCountry, userSexPref, userAge);
     }
 }

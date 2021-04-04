@@ -1,11 +1,11 @@
-package fr.esiea.ex4A.inscription;
+package fr.esiea.ex4A.match;
 
+import fr.esiea.ex4A.inscription.LoginData;
+import fr.esiea.ex4A.inscription.LoginRepository;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
 
-import static org.assertj.core.api.Assertions.assertThat;
-
-class LoginRepositoryTest {
+class MatchRepositoryTest {
 
     private final LoginRepository loginRepository = new LoginRepository();
 

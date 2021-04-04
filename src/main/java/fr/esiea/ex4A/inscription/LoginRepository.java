@@ -26,4 +26,13 @@ public class LoginRepository {
         }
         return false;
     }
+
+    public LoginData getUserByNameAndCountry(String userName, String country) {
+        for(LoginData u : loginUsers) {
+            if (u.userCountry.equals(country) && u.userName.equals(userName)){
+                return u;
+            }
+        }
+        return null;
+    }
 }

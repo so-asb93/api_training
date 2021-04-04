@@ -1,9 +1,10 @@
-package fr.esiea.ex4A.inscription;
+package fr.esiea.ex4A.match;
 
+import fr.esiea.ex4A.inscription.LoginData;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
 
-class LoginDataTest {
+class MatchDataTest {
 
     @Test
     void equality_between_two_users() {
